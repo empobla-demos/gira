@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Gira</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/mediaqueries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="../images/logos/only-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <script src="../javascripts/nav.js"></script>
+        <div class="side--mobile side--mobile--hidden side--mobile--home" onclick="openMobileSlideMenu()">
+          <div class="side--mobile__icon">
+            <div class="side__icon--line"></div>
+            <div class="side__icon--line"></div>
+            <div class="side__icon--line"></div>
+          </div>
+          <img class="side--mobile__logo" src="../images/logos/preferential-name.png" alt="Gira Logo" />
+        </div>
+        <div class="nav--mobile side--mobile--home" id="menu--mobile">
+          <a class="menu__item--mobile" href="./inicio.html">INICIO</a>
+          <a class="menu__item--mobile" href="./inicio.html#quienes-somos">¿QUIÉNES SOMOS?</a>
+          <a class="menu__item--mobile" href="./inicio.html#que-hacemos">¿QUÉ HACEMOS?</a>
+          <a class="menu__item--mobile" href="./inicio.html#equipo">EL EQUIPO</a>
+          <a class="menu__item--mobile" href="./inicio.html#call-to-action">MANTENTE ENTERADO</a>
+          <a class="menu__item--mobile" href="./inicio.html#eventos">EVENTOS</a>
+          <a class="menu__item--mobile" href="./inicio.html#galeria">GALERÍA</a>
+          <a class="menu__item--mobile" href="./unete.html">ÚNETE</a>
+          <a class="menu__item--mobile" href="./login.html">LOG IN</a>
+          <p class="close--mobile" onclick="closeMobileSlideMenu()">X</p>
+        </div>
+        <div class="side side--hidden side--home" onclick="openSlideMenu()">
+          <img class="side__logo" src="../images/logos/preferential-name.png" alt="Gira Logo" />
+          <div class="side__icon">
+            <div class="side__icon--line"></div>
+            <div class="side__icon--line"></div>
+            <div class="side__icon--line"></div>
+          </div>
+        </div>
+        <div class="nav side--home" id="menu">
+          <p class="close" onclick="closeSlideMenu()">X</p>
+          <a class="menu__item" href="./inicio.html">INICIO</a>
+          <a class="menu__item" href="./inicio.html#quienes-somos">¿QUIÉNES SOMOS?</a>
+          <a class="menu__item" href="./inicio.html#que-hacemos">¿QUÉ HACEMOS?</a>
+          <a class="menu__item" href="./inicio.html#equipo">EL EQUIPO</a>
+          <a class="menu__item" href="./inicio.html#call-to-action">MANTENTE ENTERADO</a>
+          <a class="menu__item" href="./inicio.html#eventos">EVENTOS</a>
+          <a class="menu__item" href="./inicio.html#galeria">GALERÍA</a>
+          <a class="menu__item" href="./unete.html">ÚNETE</a>
+          <a class="menu__item" href="./login.html">LOG IN</a>
+        </div>
+        <script>
+          navFade();
+          setupMobileNav();
+        </script>
+        <div class="divider divider--first divider--white">
+          <div class="divider--first__layout">
+            <div class="divider--first__logo" onclick="openSlideMenu(); openMobileSlideMenu()"></div>
+            <div class="divider--first__userbuttons">
+              <a class="button button--wide" href="./login.html">LOG IN</a>
+              <a class="button button--wide" href="./unete.html">ÚNETE</a>
+            </div>
+          </div>
+          <div class="pyramid-grid">
+            <a class="pyramid-grid__square" href="#call-to-action">
+              <div class="pyramid-grid__content">
+                <svg viewBox="0 0 45.1 45.1">
+                  <path d="M38.5,6.6A22.45,22.45,0,0,0,22.55,0h0A22.56,22.56,0,0,0,6.6,38.5,22.56,22.56,0,0,0,38.5,6.6ZM40,32.18h-6.6a29.7,29.7,0,0,0,1.54-8.31h7.5A19.69,19.69,0,0,1,40,32.18ZM22.55,42.26a18.66,18.66,0,0,1-6.82-7.44H29.37a18.59,18.59,0,0,1-6.82,7.44Zm-8-10.08a26.71,26.71,0,0,1-1.69-8.31H32.26a26.71,26.71,0,0,1-1.69,8.31ZM2.69,23.87h7.5a29.7,29.7,0,0,0,1.54,8.31H5.13a19.69,19.69,0,0,1-2.44-8.31Zm2.44-11h6.6a29.7,29.7,0,0,0-1.54,8.31H2.69a19.69,19.69,0,0,1,2.44-8.31ZM22.55,2.84a18.65,18.65,0,0,1,6.82,7.44H15.73a18.72,18.72,0,0,1,6.82-7.44Zm8,10.08a26.77,26.77,0,0,1,1.69,8.31H12.84a26.77,26.77,0,0,1,1.69-8.31Zm11.84,8.31h-7.5a29.7,29.7,0,0,0-1.54-8.31H40a19.69,19.69,0,0,1,2.44,8.31Zm-10.1-11a23.38,23.38,0,0,0-4.93-7,19.94,19.94,0,0,1,10.84,7Zm-14.59-7a23.56,23.56,0,0,0-4.93,7H6.89a19.88,19.88,0,0,1,10.83-7ZM12.79,34.82a23.61,23.61,0,0,0,4.93,7,20,20,0,0,1-10.83-7Zm14.59,7a23.55,23.55,0,0,0,4.93-7h5.91a20,20,0,0,1-10.84,7Z" />
+                </svg>
+                <p>CALL TO ACTION</p>
+              </div>
+            </a>
+            <a class="pyramid-grid__square" href="#quienes-somos">
+              <div class="pyramid-grid__content">
+                <svg viewBox="0 0 47.18 47.18">
+                  <path d="M23.59,23.47A11.74,11.74,0,1,1,35.33,11.74,11.75,11.75,0,0,1,23.59,23.47Zm0-20.54a8.81,8.81,0,1,0,8.8,8.81A8.82,8.82,0,0,0,23.59,2.93Z" />
+                  <path d="M45.71,47.18H1.47A1.47,1.47,0,0,1,0,45.71,23.59,23.59,0,0,1,14.17,24.09a1.47,1.47,0,0,1,1.85.6,8.78,8.78,0,0,0,15.14,0,1.48,1.48,0,0,1,1.85-.6A23.59,23.59,0,0,1,47.18,45.71,1.47,1.47,0,0,1,45.71,47.18ZM3,44.25H44.19A20.65,20.65,0,0,0,32.94,27.3a11.73,11.73,0,0,1-18.7,0A20.68,20.68,0,0,0,3,44.25Z" />
+                </svg>
+                <p>¿QUIÉNES SOMOS?</p>
+              </div>
+            </a>
+            <a class="pyramid-grid__square" href="#eventos">
+              <div class="pyramid-grid__content">
+                <svg id='eventsicon' viewBox="0 0 57.42 30.25">
+                  <path d="M52.89,20.93a5.06,5.06,0,0,0-1.63.26L44.09,9.57a5.17,5.17,0,0,0,1.62-3.84,5.17,5.17,0,1,0-10.34,0A5,5,0,0,0,35.88,8L26.4,15.12a4,4,0,0,0-5.72.18L11,9.06a5.81,5.81,0,0,0,.77-3A6,6,0,0,0,5.9,0,6,6,0,0,0,0,6.07a6,6,0,0,0,5.9,6.06A5.73,5.73,0,0,0,9.74,10.6L19.65,17a8,8,0,0,0-.17,1.37,4.19,4.19,0,1,0,8.37,0,3.4,3.4,0,0,0-.34-1.62L37,9.57A4.82,4.82,0,0,0,40.5,11a4.91,4.91,0,0,0,2-.34L49.64,22.3a4.56,4.56,0,0,0-1.37,3.25,4.58,4.58,0,1,0,4.62-4.62Z" />
+                </svg>
+                <p>EVENTOS</p>
+              </div>
+            </a>
+            <div class="pyramid-grid__square pyramid-grid__square--placeholder"></div>
+            <a class="pyramid-grid__square" href="#que-hacemos">
+              <div class="pyramid-grid__content">
+                <svg viewBox="0 0 42.9 42.9">
+                  <path d="M.93,17.82l5.15-1a13.09,13.09,0,0,1,1.27-3l-3-4.39a1.13,1.13,0,0,1,.17-1.35L8.11,4.39a1,1,0,0,1,1.35-.08l4.39,3A19.87,19.87,0,0,1,17,6L17.9.85A1.2,1.2,0,0,1,19,0h5.15a1.18,1.18,0,0,1,1.1.85l.93,5.23a13,13,0,0,1,3,1.18l4.3-2.95a1.16,1.16,0,0,1,1.36.17l3.71,3.71a1.15,1.15,0,0,1,.17,1.35l-3,4.31a18.07,18.07,0,0,1,1.27,3l5.15,1a1,1,0,0,1,.84,1v5.24a1,1,0,0,1-.84,1l-5.15,1a18,18,0,0,1-1.27,2.95l3,4.31a1,1,0,0,1-.17,1.35L34.8,38.43a1,1,0,0,1-1.36.08l-4.3-2.87a18.12,18.12,0,0,1-3,1.19l-.93,5.23a1.18,1.18,0,0,1-1.1.84H18.92a1.19,1.19,0,0,1-1-.84L17,36.91a16,16,0,0,1-3-1.27l-4.4,3a1,1,0,0,1-1.35-.09L4.48,34.8a1.14,1.14,0,0,1-.09-1.35l3-4.31a23.09,23.09,0,0,1-1.27-3l-5.15-1a1.07,1.07,0,0,1-.93-1V18.83a1.08,1.08,0,0,1,.93-1ZM21.45,30.41a9,9,0,1,0-8.95-9,9,9,0,0,0,9,9Z" />
+                </svg>
+                <p>¿QUÉ HACEMOS?</p>
+              </div>
+            </a>
+            <a class="pyramid-grid__square" href="#galeria">
+              <div class="pyramid-grid__content">
+                <svg viewBox="0 0 58.15 48.27">
+                  <path d="M45.71,48.27H1.47A1.47,1.47,0,0,1,0,46.8V16.94a1.46,1.46,0,0,1,1.47-1.46H45.71a1.46,1.46,0,0,1,1.47,1.46V46.8A1.47,1.47,0,0,1,45.71,48.27ZM2.93,45.34H44.25V18.41H2.93Z" />
+                  <path d="M49,42.64,6.14,31.85a1.47,1.47,0,0,1-1.07-1.78l7.28-29A1.48,1.48,0,0,1,14.13,0L57,10.84a1.47,1.47,0,0,1,1.07,1.78l-7.29,29A1.46,1.46,0,0,1,49,42.64ZM8.27,29.36,48.34,39.44l6.57-26.12L14.84,3.25Z" />
+                </svg>
+                <p>GALERÍA</p>
+              </div>
+            </a>
+            <div class="pyramid-grid__square pyramid-grid__square--placeholder"></div>
+            <div class="pyramid-grid__square pyramid-grid__square--placeholder"></div>
+            <a class="pyramid-grid__square" href="#equipo">
+              <div class="pyramid-grid__content">
+                <svg id='teamsicon' viewBox="0 0 135.56 80.2">
+                  <path d="M67.78,23.47A11.74,11.74,0,1,1,79.52,11.74,11.75,11.75,0,0,1,67.78,23.47Zm0-20.54a8.81,8.81,0,1,0,8.81,8.81A8.82,8.82,0,0,0,67.78,2.93Z" />
+                  <path d="M89.9,47.18H45.66a1.47,1.47,0,0,1-1.47-1.47A23.59,23.59,0,0,1,58.36,24.09a1.46,1.46,0,0,1,1.85.6,8.79,8.79,0,0,0,15.15,0,1.46,1.46,0,0,1,1.84-.6A23.59,23.59,0,0,1,91.37,45.71,1.47,1.47,0,0,1,89.9,47.18ZM47.18,44.25H88.39A20.68,20.68,0,0,0,77.13,27.3a11.72,11.72,0,0,1-18.69,0A20.64,20.64,0,0,0,47.18,44.25Z" />
+                  <path d="M23.59,56.11A11.74,11.74,0,1,1,35.33,44.38,11.75,11.75,0,0,1,23.59,56.11Zm0-20.54a8.81,8.81,0,1,0,8.8,8.81A8.82,8.82,0,0,0,23.59,35.57Z" />
+                  <path d="M45.71,79.82H1.47A1.47,1.47,0,0,1,0,78.35,23.59,23.59,0,0,1,14.17,56.73a1.47,1.47,0,0,1,1.85.6,8.78,8.78,0,0,0,15.14,0,1.48,1.48,0,0,1,1.85-.6A23.59,23.59,0,0,1,47.18,78.35,1.47,1.47,0,0,1,45.71,79.82ZM3,76.89H44.19a20.63,20.63,0,0,0-11.25-17,11.73,11.73,0,0,1-18.7,0A20.67,20.67,0,0,0,3,76.89Z" />
+                  <path d="M112,56.49a11.74,11.74,0,1,1,11.73-11.73A11.74,11.74,0,0,1,112,56.49ZM112,36a8.81,8.81,0,1,0,8.8,8.81A8.82,8.82,0,0,0,112,36Z" />
+                  <path d="M134.1,80.2H89.85a1.46,1.46,0,0,1-1.46-1.47,23.59,23.59,0,0,1,14.16-21.62,1.46,1.46,0,0,1,1.85.6,8.79,8.79,0,0,0,15.15,0,1.46,1.46,0,0,1,1.85-.6,23.59,23.59,0,0,1,14.16,21.62A1.46,1.46,0,0,1,134.1,80.2ZM91.37,77.26h41.21a20.65,20.65,0,0,0-11.26-17,11.7,11.7,0,0,1-18.69,0A20.65,20.65,0,0,0,91.37,77.26Z" />
+                </svg>
+                <p>EL EQUIPO</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="divider divider--gray" id="quienes-somos">
+          <div class="home-text">
+            <h1 class="home-text__title">¿QUIÉNES SOMOS?</h1>
+            <p class="home-text__text">Somos una organización de jóvenes que pretende generar un cambio en la discusión política fomentando la relevancia del desarrollo individual en el contexto público. Nuestro principal propósito es evitar la radicalización política de izquierda y derecha al proponer un camino para el desarrollo social a través de la mejora constante de la condición individual. Creemos que el individuo es el núcleo de la sociedad y la integridad del individuo es el principal pilar de la integridad social.</p>
+          </div>
+          <div class="home-image" id="quienessomos"></div>
+        </div>
+        <div class="divider divider--white" id="que-hacemos">
+          <div class="home-text">
+            <h1 class="home-text__title">¿QUÉ HACEMOS?</h1>
+            <p class="home-text__text"> Nuestros esfuerzos se concentran en la difusión de ideas sobre la individualidad y su relevancia para una sociedad estable, la acción humanitaria, y el centro de mejoramiento humano. También nuestras actividades principales se enfocan en el desarrollo y en el activismo para la creación de política local. A su vez, buscamos educar y generar líderes en toda la república con uso de las entrevistas y oportunidades mediáticas con expertos y profesores con el uso de cursos de capacitacion de diversos temas.</p>
+          </div>
+          <div class="home-image" id="quehacemos"></div>
+        </div>
+        <div class="divider divider--gray" id="equipo">
+          <div class="home-text">
+            <h1 class="home-text__title">EL EQUIPO</h1>
+            <p class="home-text__text">GIRA es una comunidad de ciudadanos que tienen la convicción de preservar los valores que han guiado a las sociedades occidentales a lo largo de la historia. <br>
+              <br> De los que se oponen a seguir los dogmas ideológicos que han impulsado diversos sectores políticos. De los que creen en la libre determinación individual y en el respeto a la ley. <br>
+              <br> De los que valoran y preservan los estatutos morales religiosos y espirituales, los cuales cínicamente han sido desprestigiados y acusados de poseer un carácter supersticioso y por lo tanto inválido en cualquier discusión argumentativa. <br>
+              <br> De los que observan como perjudicial y peligrosa las ideas de igualdad absoluta, la cultura de la cancelación, y los extremismos ideológicos.
+            </p>
+          </div>
+          <div class="team-grid">
+            <div></div>
+            <div class="team-grid__square m-cursor--default">
+              <div class="team-grid__info">
+                <div class="margin--05"></div>
+                <strong>Rodrigo Arias</strong>
+                <p>Ingeniero</p>
+                <p>21 años</p>
+              </div>
+              <img src="../images/team/roarias.png" alt="Rodrigo Arias">
+            </div>
+            <div class="team-grid__square m-cursor--default">
+              <div class="team-grid__info">
+                <div class="margin--05"></div>
+                <strong>José Carlos Briones</strong>
+                <p>Gobierno</p>
+                <p>21 años</p>
+              </div>
+              <img src="../images/team/briones.png" alt="Jose Carlos Briones">
+            </div>
+            <div></div>
+            <div></div>
+            <div class="team-grid__square m-cursor--default">
+              <div class="team-grid__info">
+                <div class="margin--05"></div>
+                <strong>Alejandra Salinas</strong>
+                <p>Ingeniera</p>
+                <p>23 años</p>
+              </div>
+              <img src="../images/team/ale.jpeg" alt="Alejandra Salinas">
+            </div>
+            <div class="team-grid__square m-cursor--default">
+              <div class="team-grid__info">
+                <div class="margin--05"></div>
+                <strong>Enrique Terrazas</strong>
+                <p>Ingeniero</p>
+                <p>21 años</p>
+              </div>
+              <img src="../images/team/terrazas.png" alt="Enrique Terrazas">
+            </div>
+            <div class="team-grid__square m-cursor--default">
+              <div class="team-grid__info">
+                <div class="margin--05"></div>
+                <strong>Santiago Fernández</strong>
+                <p>Economía</p>
+                <p>21 años</p>
+              </div>
+              <img src="../images/team/santifdz.png" alt="Placeholder image">
+            </div>
+            <div></div>
+            <div></div>
+            <div class="team-grid__square m-cursor--default">
+              <div class="team-grid__info">
+                <div class="margin--05"></div>
+                <strong>Jorge Ángeles</strong>
+                <p>Finanzas</p>
+                <p>22 años</p>
+              </div>
+              <img src="../images/team/angeles.png" alt="Jorge Ángeles">
+            </div>
+            <div class="team-grid__square m-cursor--default">
+              <div class="team-grid__info">
+                <div class="margin--05"></div>
+                <strong>Emilio Popovits</strong>
+                <p>Computer Science</p>
+                <p>21 años</p>
+              </div>
+              <img src="../images/team/emiliopopov.png" alt="Emilio Popovits">
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="divider divider--white" id="call-to-action">
+          <div class="home-text">
+            <h1 class="home-text__title">MANTENTE ENTERADO</h1>
+            <p class="home-text__text">Si quieres mantenerte enterado sobre nuestros eventos y noticias, registrate aquí para poder contactarte por correo y/o por teléfono.</p>
+          </div>
+          <form class="cta-form" id="js-cta-form">
+            <div class="grid--2">
+              <input class="cta-form__input" type="text" name="first_name" placeholder="Nombre" required disabled>
+              <input class="cta-form__input" type="text" name="last_name" placeholder="Apellido" required disabled>
+            </div>
+            <input class="cta-form__input" type="email" name="email" placeholder="Correo" required disabled>
+            <input class="cta-form__input" type="text" name="phone_number" placeholder="Télefono" disabled>
+            <div class="grid--2">
+              <input class="cta-form__input" type="number" name="age" min="0" max="150" placeholder="Edad" disabled>
+              <select class="cta-form__select" name="gender" required disabled>
+                <option value="-1" selected>Sexo</option>
+                <option value="male">Hombre</option>
+                <option value="female">Mujer</option>
+              </select>
+            </div>
+            <input class="cta-form__input" type="text" name="institution" placeholder="Universidad, Trabajo o Institución" disabled>
+            <div class="margin--2"></div>
+            <div class="button--alignleft">
+              <button class="button" id="js-cta-form-button" type="button" disabled>Registrate</button>
+            </div>
+          </form>
+        </div>
+        <div class="divider divider--gray divider--block" id="eventos">
+          <h1 class="home-text__title home-text__title--left">EVENTOS</h1>
+          <table class="event-table event-table--desktop">
+            <thead>
+              <tr>
+                <th>DESCRIPCIÓN</th>
+                <th>FECHA</th>
+                <th>EXPOSITOR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event-table__clickable" data-href="./crabrave.html">
+                <td>
+                  <h3>CRAB RAVE</h3>
+                  <p class="event-table__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus scelerisque porta. Suspendisse accumsan ornare condimentum. Etiam vel egestas erat. Duis pretium auctor est eu cursus. Donec vulputate consequat dolor non tincidunt. Nunc ut dui at tor...</p>
+                </td>
+                <td>29/09/2022</td>
+                <td>MR. CRABS</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="event-table event-table--mobile">
+            <tbody>
+              <tr class="event-table__clickable" data-href="./crabrave.html">
+                <td>
+                  <h3>CRAB RAVE</h3>
+                  <p class="event-table__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus scelerisque porta. Suspendisse accumsan ornare condimentum. Etiam vel egestas erat. Duis pretium auctor est eu cursus. Donec vulputate consequat dolor non tincidunt. Nunc ut dui at tor...</p>
+                  <p>29/09/2022</p>
+                  <p>MR. CRABS</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="margin--3"></div>
+          <div class="button--aligncenter">
+            <a class="button" href="./eventos.html">VER MÁS</a>
+          </div>
+        </div>
+        <div class="divider divider--white" id="galeria">
+          <div class="carousel">
+            <div class="carousel__medium">
+              <div class="carousel__media carousel__media--first">
+                <img src="../images/placeholders/peoplewalking.jpg" alt="Placeholder Image">
+              </div>
+              <div class="carousel__media">
+                <img src="../images/placeholders/crowd.jpg" alt="Placeholder Image">
+              </div>
+              <div class="carousel__media">
+                <img src="../images/home/quehacemos.jpeg" alt="Placeholder Image">
+              </div>
+              <div class="carousel__media">
+                <img src="../images/home/quienessomos.jpeg" alt="Placeholder Image">
+              </div>
+            </div>
+            <div class="carousel__navigation">
+              <label class="carousel__navigation-button" for="radio0"></label>
+              <label class="carousel__navigation-button" for="radio1"></label>
+              <label class="carousel__navigation-button" for="radio2"></label>
+              <label class="carousel__navigation-button" for="radio3"></label>
+            </div>
+          </div>
+        </div>
+        <script src="../javascripts/common.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            setupEventTable();
+            setupCarousel();
+          });
+        </script>
+        <footer>
+          <div class="footer-header"></div>
+          <div class="footer-grid">
+            <div class="icons-grid">
+              <a href="" target="_blank">
+                <svg viewBox="0 0 18.12 39">
+                  <path d="M18.12,12.63H12V8.58a1.65,1.65,0,0,1,1.72-1.87H18V0L12,0C5.37,0,3.85,5,3.85,8.17v4.46H0v6.88H3.85V39H12V19.51h5.46Z" />
+                </svg>
+              </a>
+              <a href="" target="_blank">
+                <svg viewBox="0 0 38.51 38.51">
+                  <path d="M27.4,0H11.11A11.12,11.12,0,0,0,0,11.11V27.39A11.12,11.12,0,0,0,11.11,38.51H27.4A11.12,11.12,0,0,0,38.51,27.39V11.11A11.12,11.12,0,0,0,27.4,0M35,27.68a7.37,7.37,0,0,1-7.37,7.38H10.93a7.37,7.37,0,0,1-7.38-7.38V11a7.37,7.37,0,0,1,7.38-7.38H27.59A7.37,7.37,0,0,1,35,11Z" />
+                  <path d="M19.26,9.36a10,10,0,1,0,10,10,10,10,0,0,0-10-10m0,16.47a6.48,6.48,0,1,1,6.47-6.48,6.48,6.48,0,0,1-6.47,6.48" />
+                  <path d="M29.58,6.65A2.33,2.33,0,1,0,31.91,9a2.33,2.33,0,0,0-2.33-2.33" />
+                </svg>
+              </a>
+              <a href="" target="_blank">
+                <svg viewBox="0 0 39.12 31.79">
+                  <path d="M39.12,3.76A16.23,16.23,0,0,1,34.51,5,8.12,8.12,0,0,0,38,.59a16.12,16.12,0,0,1-5.1,1.94A8,8,0,0,0,19.06,8a7.9,7.9,0,0,0,.21,1.83A22.76,22.76,0,0,1,2.73,1.47a7.9,7.9,0,0,0-1.09,4,8,8,0,0,0,3.57,6.68,8,8,0,0,1-3.64-1v.1A8,8,0,0,0,8,19.15a8.14,8.14,0,0,1-2.11.28,8.31,8.31,0,0,1-1.51-.14,8,8,0,0,0,7.49,5.57,16.13,16.13,0,0,1-10,3.44A15.23,15.23,0,0,1,0,28.18a22.69,22.69,0,0,0,12.3,3.61C27.06,31.79,35.13,19.56,35.13,9c0-.35,0-.69,0-1a16.52,16.52,0,0,0,4-4.16Z" />
+                </svg>
+              </a>
+            </div>
+            <p>contacto@ejemplo.com</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
